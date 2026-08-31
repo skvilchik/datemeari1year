@@ -1,0 +1,1714 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>One Year of Us</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
+
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================================
+   RESET
+================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050304;
+    color: #800020;
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: none;
+    color: inherit;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+section {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+/* ================================
+   LIGHT
+================================ */
+
+section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 75vw;
+    height: 75vw;
+
+    left: 50%;
+    top: 45%;
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(128, 0, 32, 0.16) 0%,
+            rgba(128, 0, 32, 0.07) 30%,
+            rgba(128, 0, 32, 0.025) 52%,
+            transparent 72%
+        );
+
+    filter: blur(18px);
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    animation:
+        wineLight 12s ease-in-out infinite alternate;
+}
+
+section::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 35%,
+            rgba(0, 0, 0, 0.38) 100%
+        );
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+@keyframes wineLight {
+
+    0% {
+        transform:
+            translate(-50%, -50%)
+            scale(.88);
+
+        opacity: .65;
+    }
+
+    100% {
+        transform:
+            translate(-50%, -50%)
+            scale(1.12);
+
+        opacity: 1;
+    }
+}
+
+
+/* ================================
+   GRAIN
+================================ */
+
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 100;
+
+    opacity: .035;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+}
+
+
+/* ================================
+   LILIES
+================================ */
+
+.lily {
+    position: absolute;
+
+    width: 380px;
+    height: 500px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    pointer-events: none;
+
+    z-index: 3;
+
+    opacity: .32;
+
+    filter:
+        brightness(.55)
+        saturate(.82)
+        contrast(1.08)
+        drop-shadow(
+            0 0 48px rgba(128, 0, 32, .22)
+        );
+
+    animation:
+        lilyFloat 13s ease-in-out infinite alternate;
+}
+
+.lily-top {
+    top: -135px;
+    right: -95px;
+
+    background-image:
+        url("lily-1.png");
+}
+
+.lily-bottom {
+    bottom: -185px;
+    left: -120px;
+
+    background-image:
+        url("lily-2.png");
+
+    animation-delay: -4s;
+}
+
+@keyframes lilyFloat {
+
+    0% {
+        transform:
+            translate3d(0, 0, 0)
+            rotate(7deg);
+    }
+
+    100% {
+        transform:
+            translate3d(-13px, 11px, 0)
+            rotate(11deg);
+    }
+}
+
+
+/* ================================
+   COMMON
+================================ */
+
+.hero-inner,
+.story-content,
+.video-header,
+.video-wrapper,
+.video-caption,
+.video-extra,
+.after-inner,
+.gift-inner,
+.letter-inner,
+.ending-inner {
+
+    position: relative;
+    z-index: 5;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #050304;
+}
+
+.hero-inner {
+
+    width: min(900px, 90%);
+
+    animation:
+        heroAppear 2.3s
+        cubic-bezier(.22,.61,.36,1)
+        both;
+}
+
+@keyframes heroAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(28px)
+            scale(.985);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+.eyebrow {
+
+    color: #800020;
+
+    font-size: 9px;
+
+    letter-spacing: .42em;
+
+    text-transform: uppercase;
+}
+
+.hero h1 {
+
+    margin-top: 30px;
+
+    font-family:
+        "Bodoni Moda",
+        serif;
+
+    font-size:
+        clamp(72px, 11vw, 155px);
+
+    font-weight: 500;
+
+    line-height: .82;
+
+    letter-spacing: -.065em;
+
+    color: #800020;
+
+    text-shadow:
+        0 0 30px rgba(128, 0, 32, .18),
+        0 0 90px rgba(128, 0, 32, .08);
+}
+
+.hero h1 span {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.hero-subtitle {
+
+    margin-top: 43px;
+
+    color: #9b8981;
+
+    font-size: 13px;
+
+    font-weight: 300;
+
+    line-height: 1.9;
+}
+
+.open-button {
+
+    margin-top: 47px;
+
+    color: #800020;
+
+    font-size: 10px;
+
+    letter-spacing: .24em;
+
+    text-transform: uppercase;
+
+    transition:
+        opacity .5s ease,
+        transform .5s ease;
+}
+
+.open-button:hover {
+
+    opacity: .55;
+
+    transform:
+        translateY(-2px);
+}
+
+.open-button span {
+
+    display: inline-block;
+
+    margin-left: 13px;
+
+    transition:
+        transform .6s ease;
+}
+
+.open-button:hover span {
+
+    transform:
+        translateX(8px);
+}
+
+
+/* ================================
+   STORY
+================================ */
+
+.story-intro {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+}
+
+.story-content {
+
+    width: min(720px, 90%);
+}
+
+.story-content h2 {
+
+    margin-top: 28px;
+
+    font-family:
+        "Bodoni Moda",
+        serif;
+
+    font-size:
+        clamp(55px, 7vw, 94px);
+
+    font-weight: 500;
+
+    line-height: .91;
+
+    letter-spacing: -.05em;
+
+    color: #800020;
+
+    text-shadow:
+        0 0 50px
+        rgba(128, 0, 32, .14);
+}
+
+.story-text {
+
+    max-width: 440px;
+
+    margin-top: 42px;
+
+    color: #9b8981;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+.continue-button {
+
+    margin-top: 46px;
+
+    color: #800020;
+
+    font-size: 10px;
+
+    letter-spacing: .22em;
+
+    text-transform: uppercase;
+}
+
+.continue-button span {
+
+    margin-left: 12px;
+
+    transition:
+        transform .6s ease;
+}
+
+.continue-button:hover span {
+
+    display: inline-block;
+
+    transform:
+        translateX(8px);
+}
+
+
+/* ================================
+   VIDEO
+================================ */
+
+.video-section {
+
+    padding:
+        55px 7vw 70px;
+
+    background: #020202;
+}
+
+.video-header {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    color:
+        rgba(128, 0, 32, .65);
+
+    font-size: 9px;
+
+    letter-spacing: .3em;
+
+    text-transform: uppercase;
+}
+
+.video-wrapper {
+
+    width:
+        min(1100px, 100%);
+
+    margin:
+        50px auto 0;
+
+    background: #000;
+
+    border:
+        1px solid
+        rgba(128, 0, 32, .25);
+
+    box-shadow:
+
+        0 0 90px
+        rgba(128, 0, 32, .10),
+
+        0 30px 100px
+        rgba(0, 0, 0, .6);
+}
+
+.video-wrapper video {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 76vh;
+}
+
+.video-caption {
+
+    margin-top: 18px;
+
+    text-align: center;
+
+    color:
+        rgba(128, 0, 32, .45);
+
+    font-size: 8px;
+
+    letter-spacing: .28em;
+
+    text-transform: uppercase;
+}
+
+
+/* ================================
+   VIDEO EXTRA
+================================ */
+
+.video-extra {
+
+    margin:
+        65px auto 0;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transition:
+        opacity 1.6s ease;
+}
+
+.video-extra.visible {
+    opacity: 1;
+}
+
+.extra-line {
+
+    font-family:
+        "Bodoni Moda",
+        serif;
+
+    font-size:
+        clamp(19px, 2.4vw, 28px);
+
+    line-height: 1.6;
+
+    color:
+        rgba(155, 137, 129, .82);
+
+    opacity: 0;
+
+    transform:
+        translateY(15px);
+
+    transition:
+        opacity 1.8s ease,
+        transform 1.8s
+        cubic-bezier(.22,.61,.36,1);
+}
+
+.extra-line-one.visible,
+.extra-line-two.visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+.extra-line-two {
+
+    margin-top: 5px;
+
+    color: #800020;
+
+    text-shadow:
+        0 0 28px
+        rgba(128, 0, 32, .28);
+}
+
+
+/* ================================
+   AFTER VIDEO
+================================ */
+
+.after-video {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.after-inner {
+
+    width:
+        min(720px, 90%);
+}
+
+.after-inner h2 {
+
+    margin-top: 28px;
+
+    font-family:
+        "Bodoni Moda",
+        serif;
+
+    font-size:
+        clamp(58px, 7vw, 96px);
+
+    font-weight: 500;
+
+    line-height: .88;
+
+    letter-spacing: -.05em;
+
+    color: #800020;
+
+    text-shadow:
+        0 0 55px
+        rgba(128, 0, 32, .16);
+}
+
+.after-inner > p {
+
+    margin-top: 34px;
+
+    color: #9b8981;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+.gift-button {
+
+    margin-top: 45px;
+
+    color: #800020;
+
+    font-size: 10px;
+
+    letter-spacing: .23em;
+
+    text-transform: uppercase;
+}
+
+.gift-button span {
+
+    margin-left: 12px;
+
+    transition:
+        transform .6s ease;
+}
+
+.gift-button:hover span {
+
+    display: inline-block;
+
+    transform:
+        translateX(8px);
+}
+
+
+/* ================================
+   GIFT
+================================ */
+
+.gift-section {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(128, 0, 32, .15),
+            transparent 53%
+        );
+}
+
+.gift-inner {
+
+    width:
+        min(850px, 90%);
+}
+
+.gift-line {
+
+    width: 42px;
+
+    height: 1px;
+
+    margin:
+        31px auto;
+
+    background: #800020;
+
+    box-shadow:
+        0 0 20px
+        rgba(128, 0, 32, .5);
+}
+
+.gift-inner h2 {
+
+    margin-top: 30px;
+
+    font-family:
+        "Bodoni Moda",
+        serif;
+
+    font-size:
+        clamp(56px, 7vw, 95px);
+
+    font-weight: 500;
+
+    line-height: .88;
+
+    letter-spacing: -.05em;
+
+    color: #800020;
+
+    text-shadow:
+        0 0 55px
+        rgba(128, 0, 32, .17);
+}
+
+.gift-text {
+
+    margin-top: 40px;
+
+    color: #9b8981;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   GIFT REVEAL
+================================ */
+
+.gift-reveal-button {
+
+    margin-top: 38px;
+
+    color: #800020;
+
+    font-size: 10px;
+
+    letter-spacing: .24em;
+
+    text-transform: uppercase;
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.gift-reveal-button span {
+    margin-left: 12px;
+}
+
+.gift-reveal {
+
+    max-height: 0;
+
+    opacity: 0;
+
+    overflow: hidden;
+
+    transform:
+        translateY(25px);
+
+    transition:
+        max-height 2.2s ease,
+        opacity 1.8s ease,
+        transform 1.8s
+        cubic-bezier(.22,.61,.36,1);
+}
+
+.gift-reveal.revealed {
+
+    max-height: 300px;
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+    margin-top: 48px;
+}
+
+.gift-final {
+
+    color: #b6a49c;
+
+    font-family:
+        "Bodoni Moda",
+        serif;
+
+    font-size:
+        clamp(25px, 3vw, 38px);
+
+    line-height: 1.3;
+}
+
+.gift-date {
+
+    margin-top: 28px;
+
+    color:
+        rgba(128, 0, 32, .65);
+
+    font-size: 8px;
+
+    letter-spacing: .27em;
+
+    text-transform: uppercase;
+}
+
+
+/* ================================
+   LETTER / MY WORDS
+================================ */
+
+.letter-section {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: left;
+
+    padding:
+        120px 30px;
+}
+
+.letter-inner {
+
+    width:
+        min(680px, 90%);
+
+    position: relative;
+}
+
+.letter-label {
+
+    margin-bottom: 35px;
+
+    color:
+        rgba(128, 0, 32, .65);
+
+    font-size: 9px;
+
+    letter-spacing: .32em;
+
+    text-transform: uppercase;
+}
+
+.letter-title {
+
+    font-family:
+        "Bodoni Moda",
+        serif;
+
+    font-size:
+        clamp(45px, 6vw, 75px);
+
+    font-weight: 400;
+
+    line-height: .95;
+
+    color: #800020;
+
+    margin-bottom: 45px;
+
+    text-shadow:
+        0 0 45px
+        rgba(128, 0, 32, .13);
+}
+
+.letter-text {
+
+    color: #b6a49c;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 300;
+
+    line-height: 2;
+
+    max-width: 610px;
+}
+
+.letter-text p {
+    margin-bottom: 27px;
+}
+
+.letter-signature {
+
+    margin-top: 55px;
+
+    font-family:
+        "Bodoni Moda",
+        serif;
+
+    font-style: italic;
+
+    font-size: 23px;
+
+    color: #800020;
+}
+
+
+/* ================================
+   ENDING
+================================ */
+
+.ending {
+
+    min-height: 65vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.ending h2 {
+
+    font-family:
+        "Bodoni Moda",
+        serif;
+
+    font-size:
+        clamp(34px, 4vw, 48px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: -.035em;
+
+    color: #800020;
+
+    text-shadow:
+        0 0 45px
+        rgba(128, 0, 32, .14);
+}
+
+.ending p {
+
+    margin-top: 22px;
+
+    color: #800020;
+
+    font-family:
+        "Bodoni Moda",
+        serif;
+
+    font-size: 22px;
+}
+
+
+/* ================================
+   SECTION REVEAL
+================================ */
+
+.hidden-section {
+
+    opacity: 0;
+
+    transform:
+        translateY(45px)
+        scale(.985);
+
+    pointer-events: none;
+
+    transition:
+        opacity 2s ease,
+        transform 2s
+        cubic-bezier(.22,.61,.36,1);
+}
+
+.hidden-section.visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    pointer-events: auto;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 30px;
+    }
+
+    .hero h1 {
+        font-size: 62px;
+    }
+
+    .hero-subtitle {
+        font-size: 12px;
+    }
+
+    .story-intro {
+        padding: 30px;
+    }
+
+    .story-content h2,
+    .after-inner h2,
+    .gift-inner h2 {
+        font-size: 50px;
+    }
+
+    .lily {
+        width: 210px;
+        height: 290px;
+        opacity: .25;
+    }
+
+    .lily-top {
+        top: -65px;
+        right: -80px;
+    }
+
+    .lily-bottom {
+        bottom: -95px;
+        left: -85px;
+    }
+
+    .video-section {
+        padding:
+            35px 20px 50px;
+    }
+
+    .video-extra {
+        margin-top: 45px;
+    }
+
+    .letter-section {
+        padding:
+            90px 25px;
+    }
+
+    .letter-title {
+        font-size: 48px;
+    }
+
+    .letter-text {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .ending h2 {
+        font-size: 34px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<main>
+
+
+<!-- ================================
+     HERO
+================================ -->
+
+<section class="hero" id="hero">
+
+    <div class="lily lily-top"></div>
+    <div class="lily lily-bottom"></div>
+
+    <div class="hero-inner">
+
+        <p class="eyebrow">
+            10 · 09 · 2026
+        </p>
+
+        <h1>
+            one year<br>
+            <span>of us.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            Мне захотелось сохранить<br>
+            кое-что из этого года.
+        </p>
+
+        <button
+            class="open-button"
+            id="openButton"
+        >
+            тыкай <span>↗</span>
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================
+     STORY
+================================ -->
+
+<section
+    class="story-intro hidden-section"
+    id="story"
+>
+
+    <div class="lily lily-top"></div>
+    <div class="lily lily-bottom"></div>
+
+    <div class="story-content">
+
+        <h2>
+            Иногда один год<br>
+            это не просто количество времени,<br>
+            а что то дороже.
+        </h2>
+
+        <p class="story-text">
+            Потому что происходит то,
+            что меняет твою жизнь в самую лучшую сторону,
+            и остается много воспоминаний.
+        </p>
+
+        <button
+            class="continue-button"
+            id="videoButton"
+        >
+            посмотрим коть? <span>→</span>
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================
+     VIDEO
+================================ -->
+
+<section
+    class="video-section hidden-section"
+    id="videoSection"
+>
+
+    <div class="video-header">
+
+        <p>
+            FOR YOU
+        </p>
+
+    </div>
+
+    <div class="video-wrapper">
+
+        <video
+            id="anniversaryVideo"
+            controls
+            playsinline
+        >
+
+            <source
+                src="video.mp4"
+                type="video/mp4"
+            >
+
+            Твой браузер не поддерживает видео.
+
+        </video>
+
+    </div>
+
+    <p class="video-caption">
+        press play.
+    </p>
+
+
+    <div
+        class="video-extra"
+        id="videoExtra"
+    >
+
+        <p
+            class="extra-line extra-line-one"
+        >
+            И радовать тебя будем.
+        </p>
+
+        <p
+            class="extra-line extra-line-two"
+        >
+            И в ЗЯ ходить будем. 
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================
+     AFTER VIDEO
+================================ -->
+
+<section
+    class="after-video hidden-section"
+    id="afterVideo"
+>
+
+    <div class="lily lily-top"></div>
+    <div class="lily lily-bottom"></div>
+
+    <div class="after-inner">
+
+        <h2>
+            Но это<br>
+            ещё не всё.
+        </h2>
+
+        <p>
+            Я кое-что оставил<br>
+            специально на конец.
+        </p>
+
+        <button
+            class="gift-button"
+            id="giftButton"
+        >
+            узнаешь что там,лап? <span>→</span>
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================
+     GIFT
+================================ -->
+
+<section
+    class="gift-section hidden-section"
+    id="gift"
+>
+
+    <div class="lily lily-top"></div>
+    <div class="lily lily-bottom"></div>
+
+    <div class="gift-inner">
+
+        <div class="gift-line"></div>
+
+        <h2>
+            Я хочу<br>
+            Чтобы у этой даты<br>
+            теперь был<br>
+            свой аромат.
+        </h2>
+
+        <p class="gift-text">
+            Но выбирать его буду не я.
+        </p>
+
+        <button
+            class="gift-reveal-button"
+            id="giftRevealButton"
+        >
+            открыть <span>→</span>
+        </button>
+
+        <div
+            class="gift-reveal"
+            id="giftReveal"
+        >
+
+            <p class="gift-final">
+                Мы едем вместе выбирать<br>
+                твой новый аромат.
+            </p>
+
+            <p class="gift-date">
+                one perfume date · just us
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================
+     MY WORDS
+================================ -->
+
+<section
+    class="letter-section hidden-section"
+    id="letter"
+>
+
+    <div class="lily lily-top"></div>
+    <div class="lily lily-bottom"></div>
+
+    <div class="letter-inner">
+
+        <p class="letter-label">
+            a few words for you
+        </p>
+
+        <h2 class="letter-title">
+            И ещё кое-что.
+        </h2>
+
+
+        <!--
+            ЗДЕСЬ ПОТОМ ПРОСТО МЕНЯЕШЬ ТЕКСТ.
+            МОЖНО ДОБАВЛЯТЬ СКОЛЬКО УГОДНО <p>.
+        -->
+
+        <div class="letter-text">
+
+            <p>
+                Котен,много слов я уже сказал в видео,но никак не могу остановится
+            </p>
+
+            <p>
+               Я очень благодарен тебе за все то,что происходит между нами,за твою любовь. За наше время вместе,и за то,как все проходит.Спасибо тебе за то,что внутри меня есть вера,что мы все сможем.
+            </p>
+
+            <p>
+                Ты для меня самый ценный человечек,и я всегда хочу держать тебя за ручку,всегда хочу слушать твои рассказы и мысли. Всегда хочу ощущать твое дыхание,сердцебиение,и тебя рядышком с собой. Всегда хочу смотреть в твои прекрасные глаза.
+            </p>
+
+            <p>
+             Я уверен мы все сможем, все пройдем,все преодолеем. Всегда,в приоритете у меня твой комфорт. Всегда,в приоритете у меня ты. Всегда,даже когда между нами напряжение,я тебя люблю.
+            </p>
+
+             <p>
+                Давай просто любить,так,как хотим мы. 
+            </p>
+
+        </div>
+
+
+        <div class="letter-signature">
+            твой глебка
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================
+     END
+================================ -->
+
+<section
+    class="ending hidden-section"
+    id="ending"
+>
+
+    <div class="ending-inner">
+
+        <h2>
+            люблю тебя,Ариша
+        </h2>
+
+        <p>
+            
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<script>
+
+    if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+}
+
+window.scrollTo(0, 0);
+
+/* ================================
+   ELEMENTS
+================================ */
+
+const openButton =
+    document.getElementById("openButton");
+
+const videoButton =
+    document.getElementById("videoButton");
+
+const giftButton =
+    document.getElementById("giftButton");
+
+const giftRevealButton =
+    document.getElementById("giftRevealButton");
+
+const story =
+    document.getElementById("story");
+
+const videoSection =
+    document.getElementById("videoSection");
+
+const afterVideo =
+    document.getElementById("afterVideo");
+
+const gift =
+    document.getElementById("gift");
+
+const letter =
+    document.getElementById("letter");
+
+const ending =
+    document.getElementById("ending");
+
+const video =
+    document.getElementById("anniversaryVideo");
+
+const videoExtra =
+    document.getElementById("videoExtra");
+
+const extraLineOne =
+    document.querySelector(".extra-line-one");
+
+const extraLineTwo =
+    document.querySelector(".extra-line-two");
+
+const giftReveal =
+    document.getElementById("giftReveal");
+
+
+/* ================================
+   REVEAL FUNCTION
+================================ */
+
+function reveal(section) {
+
+    if (!section) return;
+
+    section.classList.add("visible");
+
+    setTimeout(function () {
+
+        section.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }, 150);
+}
+
+
+/* ================================
+   HERO → STORY
+================================ */
+
+openButton.addEventListener(
+    "click",
+    function () {
+
+        reveal(story);
+
+    }
+);
+
+
+/* ================================
+   STORY → VIDEO
+================================ */
+
+videoButton.addEventListener(
+    "click",
+    function () {
+
+        reveal(videoSection);
+
+    }
+);
+
+
+/* ================================
+   VIDEO → TEXT → AFTER VIDEO
+================================ */
+
+video.addEventListener(
+    "ended",
+    function () {
+
+        setTimeout(function () {
+
+            videoExtra.classList.add(
+                "visible"
+            );
+
+            extraLineOne.classList.add(
+                "visible"
+            );
+
+        }, 2000);
+
+
+        setTimeout(function () {
+
+            extraLineTwo.classList.add(
+                "visible"
+            );
+
+        }, 4500);
+
+
+        setTimeout(function () {
+
+            reveal(afterVideo);
+
+        }, 9000);
+
+    }
+);
+
+
+/* ================================
+   AFTER VIDEO → GIFT
+================================ */
+
+giftButton.addEventListener(
+    "click",
+    function () {
+
+        reveal(gift);
+
+    }
+);
+
+
+/* ================================
+   GIFT → REVEAL
+================================ */
+
+giftRevealButton.addEventListener(
+    "click",
+    function () {
+
+        giftRevealButton.style.opacity =
+            "0";
+
+        giftRevealButton.style.transform =
+            "translateY(-10px)";
+
+        giftRevealButton.style.pointerEvents =
+            "none";
+
+
+        setTimeout(function () {
+
+            giftReveal.classList.add(
+                "revealed"
+            );
+
+        }, 600);
+
+
+        /*
+            После раскрытия подарка
+            через 7 секунд появляется
+            раздел с твоими словами.
+        */
+
+        setTimeout(function () {
+
+            reveal(letter);
+
+        }, 7000);
+
+    }
+);
+
+
+/* ================================
+   LETTER → ENDING
+================================ */
+
+letter.addEventListener(
+    "click",
+    function (event) {
+
+        /*
+            Пока ничего не происходит
+            при клике по письму.
+
+            Финальный экран появляется
+            после того, как пользователь
+            дочитает страницу.
+        */
+
+    }
+);
+
+
+/* ================================
+   SHOW ENDING WHEN SCROLLED
+================================ */
+
+const observer =
+    new IntersectionObserver(
+        function(entries) {
+
+            entries.forEach(function(entry) {
+
+                if (
+                    entry.isIntersecting &&
+                    entry.target === letter
+                ) {
+
+                    setTimeout(function () {
+
+                        ending.classList.add(
+                            "visible"
+                        );
+
+                    }, 1500);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.35
+        }
+    );
+
+observer.observe(letter);
+
+window.addEventListener("load", function () {
+    window.scrollTo(0, 0);
+});
+
+</script>
+
+</body>
+</html>
+
