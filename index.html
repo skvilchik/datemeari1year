@@ -1,6 +1,7 @@
-
 <!DOCTYPE html>
+
 <html lang="ru">
+
 <head>
 
 <meta charset="UTF-8">
@@ -9,7 +10,7 @@
 <title>One Year of Us</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
@@ -84,8 +85,7 @@ section::before {
 
     z-index: 0;
 
-    animation:
-        wineLight 12s ease-in-out infinite alternate;
+    animation: wineLight 12s ease-in-out infinite alternate;
 }
 
 section::after {
@@ -152,6 +152,7 @@ body::before {
 ================================ */
 
 .lily {
+
     position: absolute;
 
     width: 380px;
@@ -180,6 +181,7 @@ body::before {
 }
 
 .lily-top {
+
     top: -135px;
     right: -95px;
 
@@ -187,8 +189,12 @@ body::before {
         url("lily-1.png");
 }
 
+
+/* НИЖНЯЯ ЛИЛИЯ — ОПУЩЕНА НИЖЕ */
+
 .lily-bottom {
-    bottom: -185px;
+
+    bottom: -245px;
     left: -120px;
 
     background-image:
@@ -229,6 +235,7 @@ body::before {
 .ending-inner {
 
     position: relative;
+
     z-index: 5;
 }
 
@@ -364,12 +371,14 @@ body::before {
 
     transition:
         transform .6s ease;
+
+    font-size: 13px;
 }
 
 .open-button:hover span {
 
     transform:
-        translateX(8px);
+        translate(5px, -2px);
 }
 
 
@@ -555,6 +564,7 @@ body::before {
 }
 
 .video-extra.visible {
+
     opacity: 1;
 }
 
@@ -932,6 +942,7 @@ body::before {
 }
 
 .letter-text p {
+
     margin-bottom: 27px;
 }
 
@@ -1075,8 +1086,9 @@ body::before {
         right: -80px;
     }
 
+    /* ещё ниже на телефоне */
     .lily-bottom {
-        bottom: -95px;
+        bottom: -145px;
         left: -85px;
     }
 
@@ -1106,55 +1118,60 @@ body::before {
     .ending h2 {
         font-size: 34px;
     }
+
+}
+
+
+/* ================================
+   SCROLL TO TOP FIX
+================================ */
+
+html,
+body {
+    scroll-behavior: smooth;
 }
 
 </style>
 
 </head>
 
-
 <body>
 
 <main>
-
 
 <!-- ================================
      HERO
 ================================ -->
 
 <section class="hero" id="hero">
+ 
+<div class="lily lily-top"></div>
+<div class="lily lily-bottom"></div>
 
-    <div class="lily lily-top"></div>
-    <div class="lily lily-bottom"></div>
+<div class="hero-inner">
 
-    <div class="hero-inner">
+    <p class="eyebrow">
+        10 · 09 · 2026
+    </p>
 
-        <p class="eyebrow">
-            10 · 09 · 2026
-        </p>
+    <h1>
+        one year<br>
+        <span>of us.</span>
+    </h1>
 
-        <h1>
-            one year<br>
-            <span>of us.</span>
-        </h1>
+    <p class="hero-subtitle">
+        Мне захотелось сохранить<br>
+        кое-что из этого года.
+    </p>
 
-        <p class="hero-subtitle">
-            Мне захотелось сохранить<br>
-            кое-что из этого года.
-        </p>
+    <button class="open-button" id="openButton">
+        тыкай <span>&#8599;</span>
+    </button>
 
-        <button
-            class="open-button"
-            id="openButton"
-        >
-            тыкай <span>↗</span>
-        </button>
-
-    </div>
+</div>
+ 
 
 </section>
-
-
 
 <!-- ================================
      STORY
@@ -1165,35 +1182,35 @@ body::before {
     id="story"
 >
 
-    <div class="lily lily-top"></div>
-    <div class="lily lily-bottom"></div>
+ 
+<div class="lily lily-top"></div>
+<div class="lily lily-bottom"></div>
 
-    <div class="story-content">
+<div class="story-content">
 
-        <h2>
-            Иногда один год<br>
-            это не просто количество времени,<br>
-            а что то дороже.
-        </h2>
+    <h2>
+        Иногда один год<br>
+        это не просто количество времени,<br>
+        а что то дороже.
+    </h2>
 
-        <p class="story-text">
-            Потому что происходит то,
-            что меняет твою жизнь в самую лучшую сторону,
-            и остается много воспоминаний.
-        </p>
+    <p class="story-text">
+        Потому что происходит то,
+        что меняет твою жизнь в самую лучшую сторону,
+        и остается много воспоминаний.
+    </p>
 
-        <button
-            class="continue-button"
-            id="videoButton"
-        >
-            посмотрим коть? <span>→</span>
-        </button>
+    <button
+        class="continue-button"
+        id="videoButton"
+    >
+        посмотрим коть? <span>→</span>
+    </button>
 
-    </div>
+</div>
+ 
 
 </section>
-
-
 
 <!-- ================================
      VIDEO
@@ -1204,60 +1221,56 @@ body::before {
     id="videoSection"
 >
 
-    <div class="video-header">
+ 
+<div class="video-header">
 
-        <p>
-            FOR YOU
-        </p>
-
-    </div>
-
-    <div class="video-wrapper">
-
-        <video
-            id="anniversaryVideo"
-            controls
-            playsinline
-        >
-
-            <source
-                src="video.mp4"
-                type="video/mp4"
-            >
-
-            Твой браузер не поддерживает видео.
-
-        </video>
-
-    </div>
-
-    <p class="video-caption">
-        press play.
+    <p>
+        FOR YOU
     </p>
 
+</div>
 
-    <div
-        class="video-extra"
-        id="videoExtra"
+<div class="video-wrapper">
+
+    <video
+        id="anniversaryVideo"
+        controls
+        playsinline
     >
 
-        <p
-            class="extra-line extra-line-one"
+        <source
+            src="video.mp4"
+            type="video/mp4"
         >
-            И радовать тебя будем.
-        </p>
 
-        <p
-            class="extra-line extra-line-two"
-        >
-            И в ЗЯ ходить будем. 
-        </p>
+        Твой браузер не поддерживает видео.
 
-    </div>
+    </video>
+
+</div>
+
+<p class="video-caption">
+    press play.
+</p>
+
+
+<div
+    class="video-extra"
+    id="videoExtra"
+>
+
+    <p class="extra-line extra-line-one">
+        И радовать тебя будем.
+    </p>
+
+    <p class="extra-line extra-line-two">
+       
+    </p>
+
+</div>
+ 
 
 </section>
-
-
 
 <!-- ================================
      AFTER VIDEO
@@ -1268,33 +1281,33 @@ body::before {
     id="afterVideo"
 >
 
-    <div class="lily lily-top"></div>
-    <div class="lily lily-bottom"></div>
+ 
+<div class="lily lily-top"></div>
+<div class="lily lily-bottom"></div>
 
-    <div class="after-inner">
+<div class="after-inner">
 
-        <h2>
-            Но это<br>
-            ещё не всё.
-        </h2>
+    <h2>
+        Но это<br>
+        ещё не всё.
+    </h2>
 
-        <p>
-            Я кое-что оставил<br>
-            специально на конец.
-        </p>
+    <p>
+        Я кое-что оставил<br>
+        специально на конец.
+    </p>
 
-        <button
-            class="gift-button"
-            id="giftButton"
-        >
-            узнаешь что там,лап? <span>→</span>
-        </button>
+    <button
+        class="gift-button"
+        id="giftButton"
+    >
+        узнаешь что там,лап? <span>→</span>
+    </button>
 
-    </div>
+</div>
+ 
 
 </section>
-
-
 
 <!-- ================================
      GIFT
@@ -1305,52 +1318,50 @@ body::before {
     id="gift"
 >
 
-    <div class="lily lily-top"></div>
-    <div class="lily lily-bottom"></div>
+ 
+<div class="lily lily-top"></div>
+<div class="lily lily-bottom"></div>
 
-    <div class="gift-inner">
+<div class="gift-inner">
 
-        <div class="gift-line"></div>
+    <div class="gift-line"></div>
 
-        <h2>
-            Я хочу<br>
-            Чтобы у этой даты<br>
-            теперь был<br>
-            свой аромат.
-        </h2>
+    <h2>
+        Я хочу<br>
+        Чтобы у этой даты<br>
+        теперь был<br>
+        свой аромат.
+    </h2>
 
-        <p class="gift-text">
-            Но выбирать его буду не я.
+    <p class="gift-text">
+        Но выбирать его буду не я.
+    </p>
+
+    <button
+        class="gift-reveal-button"
+        id="giftRevealButton"
+    >
+        открыть <span>→</span>
+    </button>
+
+    <div
+        class="gift-reveal"
+        id="giftReveal"
+    >
+
+        <p class="gift-final">
+            Мы едем вместе выбирать<br>
+            твой новый аромат.
         </p>
 
-        <button
-            class="gift-reveal-button"
-            id="giftRevealButton"
-        >
-            открыть <span>→</span>
-        </button>
-
-        <div
-            class="gift-reveal"
-            id="giftReveal"
-        >
-
-            <p class="gift-final">
-                Мы едем вместе выбирать<br>
-                твой новый аромат.
-            </p>
-
-            <p class="gift-date">
-                one perfume date · just us
-            </p>
-
-        </div>
+        <p class="gift-date"></p>
 
     </div>
 
+</div>
+ 
+
 </section>
-
-
 
 <!-- ================================
      MY WORDS
@@ -1361,59 +1372,52 @@ body::before {
     id="letter"
 >
 
-    <div class="lily lily-top"></div>
-    <div class="lily lily-bottom"></div>
+ 
+<div class="lily lily-top"></div>
+<div class="lily lily-bottom"></div>
 
-    <div class="letter-inner">
+<div class="letter-inner">
 
-        <p class="letter-label">
-            a few words for you
+    <p class="letter-label">
+        a few words for you
+    </p>
+
+    <h2 class="letter-title">
+        И ещё кое-что.
+    </h2>
+
+    <div class="letter-text">
+
+        <p>
+            Котен,много слов я уже сказал в видео,но никак не могу остановится
         </p>
 
-        <h2 class="letter-title">
-            И ещё кое-что.
-        </h2>
+        <p>
+            Я очень благодарен тебе за все то,что происходит между нами,за твою любовь. За наше время вместе,и за то,как все проходит.Спасибо тебе за то,что внутри меня есть вера,что мы все сможем.
+        </p>
 
+        <p>
+            Ты для меня самый ценный человечек,и я всегда хочу держать тебя за ручку,всегда хочу слушать твои рассказы и мысли. Всегда хочу ощущать твое дыхание,сердцебиение,и тебя рядышком с собой. Всегда хочу смотреть в твои прекрасные глаза.
+        </p>
 
-        <!--
-            ЗДЕСЬ ПОТОМ ПРОСТО МЕНЯЕШЬ ТЕКСТ.
-            МОЖНО ДОБАВЛЯТЬ СКОЛЬКО УГОДНО <p>.
-        -->
+        <p>
+            Я уверен мы все сможем, все пройдем,все преодолеем. Всегда,в приоритете у меня твой комфорт. Всегда,в приоритете у меня ты. Всегда,даже когда между нами напряжение,я тебя люблю.
+        </p>
 
-        <div class="letter-text">
-
-            <p>
-                Котен,много слов я уже сказал в видео,но никак не могу остановится
-            </p>
-
-            <p>
-               Я очень благодарен тебе за все то,что происходит между нами,за твою любовь. За наше время вместе,и за то,как все проходит.Спасибо тебе за то,что внутри меня есть вера,что мы все сможем.
-            </p>
-
-            <p>
-                Ты для меня самый ценный человечек,и я всегда хочу держать тебя за ручку,всегда хочу слушать твои рассказы и мысли. Всегда хочу ощущать твое дыхание,сердцебиение,и тебя рядышком с собой. Всегда хочу смотреть в твои прекрасные глаза.
-            </p>
-
-            <p>
-             Я уверен мы все сможем, все пройдем,все преодолеем. Всегда,в приоритете у меня твой комфорт. Всегда,в приоритете у меня ты. Всегда,даже когда между нами напряжение,я тебя люблю.
-            </p>
-
-             <p>
-                Давай просто любить,так,как хотим мы. 
-            </p>
-
-        </div>
-
-
-        <div class="letter-signature">
-            твой глебка
-        </div>
+        <p>
+            Давай просто любить,так,как хотим мы.
+        </p>
 
     </div>
 
+    <div class="letter-signature">
+        твой глебка
+    </div>
+
+</div>
+ 
+
 </section>
-
-
 
 <!-- ================================
      END
@@ -1424,32 +1428,37 @@ body::before {
     id="ending"
 >
 
-    <div class="ending-inner">
+ 
+<div class="ending-inner">
 
-        <h2>
-            люблю тебя,Ариша
-        </h2>
+    <h2>
+        люблю тебя,Ариша
+    </h2>
 
-        <p>
-            
-        </p>
+    <p>
+    </p>
 
-    </div>
+</div>
+ 
 
 </section>
 
-
 </main>
-
-
 
 <script>
 
-    if ("scrollRestoration" in history) {
+/* ================================
+   SCROLL TO TOP
+================================ */
+
+if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
 }
 
-window.scrollTo(0, 0);
+window.addEventListener("beforeunload", function () {
+    window.scrollTo(0, 0);
+});
+
 
 /* ================================
    ELEMENTS
@@ -1631,12 +1640,6 @@ giftRevealButton.addEventListener(
         }, 600);
 
 
-        /*
-            После раскрытия подарка
-            через 7 секунд появляется
-            раздел с твоими словами.
-        */
-
         setTimeout(function () {
 
             reveal(letter);
@@ -1648,28 +1651,7 @@ giftRevealButton.addEventListener(
 
 
 /* ================================
-   LETTER → ENDING
-================================ */
-
-letter.addEventListener(
-    "click",
-    function (event) {
-
-        /*
-            Пока ничего не происходит
-            при клике по письму.
-
-            Финальный экран появляется
-            после того, как пользователь
-            дочитает страницу.
-        */
-
-    }
-);
-
-
-/* ================================
-   SHOW ENDING WHEN SCROLLED
+   SHOW ENDING
 ================================ */
 
 const observer =
@@ -1703,12 +1685,23 @@ const observer =
 
 observer.observe(letter);
 
-window.addEventListener("load", function () {
-    window.scrollTo(0, 0);
-});
+
+/* ================================
+   PAGE LOAD → TOP
+================================ */
+
+window.addEventListener(
+    "load",
+    function () {
+
+        setTimeout(function () {
+            window.scrollTo(0, 0);
+        }, 50);
+
+    }
+);
 
 </script>
 
 </body>
 </html>
-
