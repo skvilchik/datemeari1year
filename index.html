@@ -1,6 +1,7 @@
-
 <!DOCTYPE html>
+
 <html lang="ru">
+
 <head>
 
 <meta charset="UTF-8">
@@ -9,7 +10,7 @@
 <title>One Year of Us</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
@@ -30,7 +31,7 @@ html {
 }
 
 body {
-    background: #050304;
+    background: #080405;
     color: #800020;
     font-family: "DM Sans", sans-serif;
     overflow-x: hidden;
@@ -72,9 +73,9 @@ section::before {
     background:
         radial-gradient(
             circle,
-            rgba(128, 0, 32, 0.16) 0%,
-            rgba(128, 0, 32, 0.07) 30%,
-            rgba(128, 0, 32, 0.025) 52%,
+            rgba(128, 0, 32, 0.30) 0%,
+            rgba(128, 0, 32, 0.14) 30%,
+            rgba(128, 0, 32, 0.055) 52%,
             transparent 72%
         );
 
@@ -84,8 +85,7 @@ section::before {
 
     z-index: 0;
 
-    animation:
-        wineLight 12s ease-in-out infinite alternate;
+    animation: wineLight 12s ease-in-out infinite alternate;
 }
 
 section::after {
@@ -113,7 +113,7 @@ section::after {
             translate(-50%, -50%)
             scale(.88);
 
-        opacity: .65;
+        opacity: .82;
     }
 
     100% {
@@ -125,6 +125,34 @@ section::after {
     }
 }
 
+
+/* ================================
+   DAYLIGHT BOOST
+   ================================ */
+
+section::before {
+    width: 90vw;
+    height: 90vw;
+    filter: blur(10px);
+}
+
+section::after {
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            transparent 20%,
+            rgba(0, 0, 0, .20) 100%
+        );
+}
+
+section .lily {
+    filter:
+        brightness(.88)
+        saturate(1.08)
+        contrast(1.12)
+        drop-shadow(0 0 65px rgba(128, 0, 32, .42))
+        drop-shadow(0 0 18px rgba(128, 0, 32, .42));
+}
 
 /* ================================
    GRAIN
@@ -152,6 +180,7 @@ body::before {
 ================================ */
 
 .lily {
+
     position: absolute;
 
     width: 380px;
@@ -165,14 +194,14 @@ body::before {
 
     z-index: 3;
 
-    opacity: .32;
+    opacity: .52;
 
     filter:
-        brightness(.55)
-        saturate(.82)
+        brightness(.78)
+        saturate(1.02)
         contrast(1.08)
         drop-shadow(
-            0 0 48px rgba(128, 0, 32, .22)
+            0 0 48px rgba(128, 0, 32, .40)
         );
 
     animation:
@@ -180,6 +209,7 @@ body::before {
 }
 
 .lily-top {
+
     top: -135px;
     right: -95px;
 
@@ -187,8 +217,12 @@ body::before {
         url("lily-1.png");
 }
 
+
+/* НИЖНЯЯ ЛИЛИЯ — ОПУЩЕНА НИЖЕ */
+
 .lily-bottom {
-    bottom: -185px;
+
+    bottom: -245px;
     left: -120px;
 
     background-image:
@@ -229,6 +263,7 @@ body::before {
 .ending-inner {
 
     position: relative;
+
     z-index: 5;
 }
 
@@ -309,8 +344,8 @@ body::before {
     color: #800020;
 
     text-shadow:
-        0 0 30px rgba(128, 0, 32, .18),
-        0 0 90px rgba(128, 0, 32, .08);
+        0 0 30px rgba(128, 0, 32, .32),
+        0 0 90px rgba(128, 0, 32, .30);
 }
 
 .hero h1 span {
@@ -364,12 +399,14 @@ body::before {
 
     transition:
         transform .6s ease;
+
+    font-size: 13px;
 }
 
 .open-button:hover span {
 
     transform:
-        translateX(8px);
+        translate(5px, -2px);
 }
 
 
@@ -414,7 +451,7 @@ body::before {
 
     text-shadow:
         0 0 50px
-        rgba(128, 0, 32, .14);
+        rgba(128, 0, 32, .26);
 }
 
 .story-text {
@@ -469,7 +506,7 @@ body::before {
     padding:
         55px 7vw 70px;
 
-    background: #020202;
+    background: #060405;
 }
 
 .video-header {
@@ -479,7 +516,7 @@ body::before {
     justify-content: flex-end;
 
     color:
-        rgba(128, 0, 32, .65);
+        rgba(128, 0, 32, .82);
 
     font-size: 9px;
 
@@ -500,12 +537,12 @@ body::before {
 
     border:
         1px solid
-        rgba(128, 0, 32, .25);
+        rgba(128, 0, 32, .40);
 
     box-shadow:
 
         0 0 90px
-        rgba(128, 0, 32, .10),
+        rgba(128, 0, 32, .20),
 
         0 30px 100px
         rgba(0, 0, 0, .6);
@@ -527,7 +564,7 @@ body::before {
     text-align: center;
 
     color:
-        rgba(128, 0, 32, .45);
+        rgba(128, 0, 32, .82);
 
     font-size: 8px;
 
@@ -555,6 +592,7 @@ body::before {
 }
 
 .video-extra.visible {
+
     opacity: 1;
 }
 
@@ -570,7 +608,7 @@ body::before {
     line-height: 1.6;
 
     color:
-        rgba(155, 137, 129, .82);
+        rgba(190, 174, 166, .92);
 
     opacity: 0;
 
@@ -600,7 +638,7 @@ body::before {
 
     text-shadow:
         0 0 28px
-        rgba(128, 0, 32, .28);
+        rgba(128, 0, 32, .42);
 }
 
 
@@ -646,7 +684,7 @@ body::before {
 
     text-shadow:
         0 0 55px
-        rgba(128, 0, 32, .16);
+        rgba(128, 0, 32, .30);
 }
 
 .after-inner > p {
@@ -707,7 +745,7 @@ body::before {
     background:
         radial-gradient(
             circle at center,
-            rgba(128, 0, 32, .15),
+            rgba(128, 0, 32, .42),
             transparent 53%
         );
 }
@@ -755,7 +793,7 @@ body::before {
 
     text-shadow:
         0 0 55px
-        rgba(128, 0, 32, .17);
+        rgba(128, 0, 32, .30);
 }
 
 .gift-text {
@@ -842,7 +880,7 @@ body::before {
     margin-top: 28px;
 
     color:
-        rgba(128, 0, 32, .65);
+        rgba(128, 0, 32, .82);
 
     font-size: 8px;
 
@@ -883,7 +921,7 @@ body::before {
     margin-bottom: 35px;
 
     color:
-        rgba(128, 0, 32, .65);
+        rgba(128, 0, 32, .82);
 
     font-size: 9px;
 
@@ -911,7 +949,7 @@ body::before {
 
     text-shadow:
         0 0 45px
-        rgba(128, 0, 32, .13);
+        rgba(128, 0, 32, .48);
 }
 
 .letter-text {
@@ -932,6 +970,7 @@ body::before {
 }
 
 .letter-text p {
+
     margin-bottom: 27px;
 }
 
@@ -987,7 +1026,7 @@ body::before {
 
     text-shadow:
         0 0 45px
-        rgba(128, 0, 32, .14);
+        rgba(128, 0, 32, .26);
 }
 
 .ending p {
@@ -1042,6 +1081,21 @@ body::before {
 
 @media (max-width: 600px) {
 
+    section::before {
+        width: 145vw;
+        height: 145vw;
+        filter: blur(8px);
+    }
+
+    section .lily {
+        filter:
+            brightness(.94)
+            saturate(1.12)
+            contrast(1.1)
+            drop-shadow(0 0 42px rgba(128, 0, 32, .48))
+            drop-shadow(0 0 14px rgba(128, 0, 32, .30));
+    }
+
     .hero {
         padding: 30px;
     }
@@ -1067,7 +1121,7 @@ body::before {
     .lily {
         width: 210px;
         height: 290px;
-        opacity: .25;
+        opacity: .42;
     }
 
     .lily-top {
@@ -1075,8 +1129,9 @@ body::before {
         right: -80px;
     }
 
+    /* ещё ниже на телефоне */
     .lily-bottom {
-        bottom: -95px;
+        bottom: -145px;
         left: -85px;
     }
 
@@ -1106,55 +1161,71 @@ body::before {
     .ending h2 {
         font-size: 34px;
     }
+
+}
+
+
+/* ================================
+   SCROLL TO TOP FIX
+================================ */
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+
+.arrow-text {
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0;
+    display: inline-block;
+    color: inherit;
+    text-shadow: 0 0 12px rgba(128, 0, 32, .45);
 }
 
 </style>
 
 </head>
 
-
 <body>
 
 <main>
-
 
 <!-- ================================
      HERO
 ================================ -->
 
 <section class="hero" id="hero">
+ 
+<div class="lily lily-top"></div>
+<div class="lily lily-bottom"></div>
 
-    <div class="lily lily-top"></div>
-    <div class="lily lily-bottom"></div>
+<div class="hero-inner">
 
-    <div class="hero-inner">
+    <p class="eyebrow">
+        10 · 09 · 2026
+    </p>
 
-        <p class="eyebrow">
-            10 · 09 · 2026
-        </p>
+    <h1>
+        one year<br>
+        <span>of us.</span>
+    </h1>
 
-        <h1>
-            one year<br>
-            <span>of us.</span>
-        </h1>
+    <p class="hero-subtitle">
+        Мне захотелось сохранить<br>
+        кое-что из этого года.
+    </p>
 
-        <p class="hero-subtitle">
-            Мне захотелось сохранить<br>
-            кое-что из этого года.
-        </p>
+    <button class="open-button" id="openButton">
+    тыкай <span class="arrow-text">-&gt;</span>
+</button> 
 
-        <button
-            class="open-button"
-            id="openButton"
-        >
-            тыкай <span>↗</span>
-        </button>
-
-    </div>
+</div>
+ 
 
 </section>
-
-
 
 <!-- ================================
      STORY
@@ -1165,35 +1236,35 @@ body::before {
     id="story"
 >
 
-    <div class="lily lily-top"></div>
-    <div class="lily lily-bottom"></div>
+ 
+<div class="lily lily-top"></div>
+<div class="lily lily-bottom"></div>
 
-    <div class="story-content">
+<div class="story-content">
 
-        <h2>
-            Иногда один год<br>
-            это не просто количество времени,<br>
-            а что то дороже.
-        </h2>
+    <h2>
+        Иногда один год<br>
+        это не просто количество времени,<br>
+        а что то дороже.
+    </h2>
 
-        <p class="story-text">
-            Потому что происходит то,
-            что меняет твою жизнь в самую лучшую сторону,
-            и остается много воспоминаний.
-        </p>
+    <p class="story-text">
+        Потому что происходит то,
+        что меняет твою жизнь в самую лучшую сторону,
+        и остается много воспоминаний.
+    </p>
 
-        <button
-            class="continue-button"
-            id="videoButton"
-        >
-            посмотрим коть? <span>→</span>
-        </button>
+    <button
+        class="continue-button"
+        id="videoButton"
+    >
+        посмотрим коть? <span>→</span>
+    </button>
 
-    </div>
+</div>
+ 
 
 </section>
-
-
 
 <!-- ================================
      VIDEO
@@ -1204,60 +1275,56 @@ body::before {
     id="videoSection"
 >
 
-    <div class="video-header">
+ 
+<div class="video-header">
 
-        <p>
-            FOR YOU
-        </p>
-
-    </div>
-
-    <div class="video-wrapper">
-
-        <video
-            id="anniversaryVideo"
-            controls
-            playsinline
-        >
-
-            <source
-                src="video.mp4"
-                type="video/mp4"
-            >
-
-            Твой браузер не поддерживает видео.
-
-        </video>
-
-    </div>
-
-    <p class="video-caption">
-        press play.
+    <p>
+        FOR YOU
     </p>
 
+</div>
 
-    <div
-        class="video-extra"
-        id="videoExtra"
+<div class="video-wrapper">
+
+    <video
+        id="anniversaryVideo"
+        controls
+        playsinline
     >
 
-        <p
-            class="extra-line extra-line-one"
+        <source
+            src="video.mp4"
+            type="video/mp4"
         >
-            И радовать тебя будем.
-        </p>
 
-        <p
-            class="extra-line extra-line-two"
-        >
-            И в ЗЯ ходить будем. 
-        </p>
+        Твой браузер не поддерживает видео.
 
-    </div>
+    </video>
+
+</div>
+
+<p class="video-caption">
+    press play.
+</p>
+
+
+<div
+    class="video-extra"
+    id="videoExtra"
+>
+
+    <p class="extra-line extra-line-one">
+        И радовать тебя будем.
+    </p>
+
+    <p class="extra-line extra-line-two">
+       
+    </p>
+
+</div>
+ 
 
 </section>
-
-
 
 <!-- ================================
      AFTER VIDEO
@@ -1268,33 +1335,33 @@ body::before {
     id="afterVideo"
 >
 
-    <div class="lily lily-top"></div>
-    <div class="lily lily-bottom"></div>
+ 
+<div class="lily lily-top"></div>
+<div class="lily lily-bottom"></div>
 
-    <div class="after-inner">
+<div class="after-inner">
 
-        <h2>
-            Но это<br>
-            ещё не всё.
-        </h2>
+    <h2>
+        Но это<br>
+        ещё не всё.
+    </h2>
 
-        <p>
-            Я кое-что оставил<br>
-            специально на конец.
-        </p>
+    <p>
+        Я кое-что оставил<br>
+        специально на конец.
+    </p>
 
-        <button
-            class="gift-button"
-            id="giftButton"
-        >
-            узнаешь что там,лап? <span>→</span>
-        </button>
+    <button
+        class="gift-button"
+        id="giftButton"
+    >
+        узнаешь что там,лап? <span>→</span>
+    </button>
 
-    </div>
+</div>
+ 
 
 </section>
-
-
 
 <!-- ================================
      GIFT
@@ -1305,52 +1372,50 @@ body::before {
     id="gift"
 >
 
-    <div class="lily lily-top"></div>
-    <div class="lily lily-bottom"></div>
+ 
+<div class="lily lily-top"></div>
+<div class="lily lily-bottom"></div>
 
-    <div class="gift-inner">
+<div class="gift-inner">
 
-        <div class="gift-line"></div>
+    <div class="gift-line"></div>
 
-        <h2>
-            Я хочу<br>
-            Чтобы у этой даты<br>
-            теперь был<br>
-            свой аромат.
-        </h2>
+    <h2>
+        Я хочу<br>
+        Чтобы у этой даты<br>
+        теперь был<br>
+        свой аромат.
+    </h2>
 
-        <p class="gift-text">
-            Но выбирать его буду не я.
+    <p class="gift-text">
+        Но выбирать его буду не я.
+    </p>
+
+    <button
+        class="gift-reveal-button"
+        id="giftRevealButton"
+    >
+        открыть <span>→</span>
+    </button>
+
+    <div
+        class="gift-reveal"
+        id="giftReveal"
+    >
+
+        <p class="gift-final">
+            Мы едем вместе выбирать<br>
+            твой новый аромат.
         </p>
 
-        <button
-            class="gift-reveal-button"
-            id="giftRevealButton"
-        >
-            открыть <span>→</span>
-        </button>
-
-        <div
-            class="gift-reveal"
-            id="giftReveal"
-        >
-
-            <p class="gift-final">
-                Мы едем вместе выбирать<br>
-                твой новый аромат.
-            </p>
-
-            <p class="gift-date">
-                one perfume date · just us
-            </p>
-
-        </div>
+        <p class="gift-date"></p>
 
     </div>
 
+</div>
+ 
+
 </section>
-
-
 
 <!-- ================================
      MY WORDS
@@ -1361,59 +1426,52 @@ body::before {
     id="letter"
 >
 
-    <div class="lily lily-top"></div>
-    <div class="lily lily-bottom"></div>
+ 
+<div class="lily lily-top"></div>
+<div class="lily lily-bottom"></div>
 
-    <div class="letter-inner">
+<div class="letter-inner">
 
-        <p class="letter-label">
-            a few words for you
+    <p class="letter-label">
+        a few words for you
+    </p>
+
+    <h2 class="letter-title">
+        И ещё кое-что.
+    </h2>
+
+    <div class="letter-text">
+
+        <p>
+            Котен,много слов я уже сказал в видео,но никак не могу остановится
         </p>
 
-        <h2 class="letter-title">
-            И ещё кое-что.
-        </h2>
+        <p>
+            Я очень благодарен тебе за все то,что происходит между нами,за твою любовь. За наше время вместе,и за то,как все проходит.Спасибо тебе за то,что внутри меня есть вера,что мы все сможем.
+        </p>
 
+        <p>
+            Ты для меня самый ценный человечек,и я всегда хочу держать тебя за ручку,всегда хочу слушать твои рассказы и мысли. Всегда хочу ощущать твое дыхание,сердцебиение,и тебя рядышком с собой. Всегда хочу смотреть в твои прекрасные глаза.
+        </p>
 
-        <!--
-            ЗДЕСЬ ПОТОМ ПРОСТО МЕНЯЕШЬ ТЕКСТ.
-            МОЖНО ДОБАВЛЯТЬ СКОЛЬКО УГОДНО <p>.
-        -->
+        <p>
+            Я уверен мы все сможем, все пройдем,все преодолеем. Всегда,в приоритете у меня твой комфорт. Всегда,в приоритете у меня ты. Всегда,даже когда между нами напряжение,я тебя люблю.
+        </p>
 
-        <div class="letter-text">
-
-            <p>
-                Котен,много слов я уже сказал в видео,но никак не могу остановится
-            </p>
-
-            <p>
-               Я очень благодарен тебе за все то,что происходит между нами,за твою любовь. За наше время вместе,и за то,как все проходит.Спасибо тебе за то,что внутри меня есть вера,что мы все сможем.
-            </p>
-
-            <p>
-                Ты для меня самый ценный человечек,и я всегда хочу держать тебя за ручку,всегда хочу слушать твои рассказы и мысли. Всегда хочу ощущать твое дыхание,сердцебиение,и тебя рядышком с собой. Всегда хочу смотреть в твои прекрасные глаза.
-            </p>
-
-            <p>
-             Я уверен мы все сможем, все пройдем,все преодолеем. Всегда,в приоритете у меня твой комфорт. Всегда,в приоритете у меня ты. Всегда,даже когда между нами напряжение,я тебя люблю.
-            </p>
-
-             <p>
-                Давай просто любить,так,как хотим мы. 
-            </p>
-
-        </div>
-
-
-        <div class="letter-signature">
-            твой глебка
-        </div>
+        <p>
+            Давай просто любить,так,как хотим мы.
+        </p>
 
     </div>
 
+    <div class="letter-signature">
+        твой глебка
+    </div>
+
+</div>
+ 
+
 </section>
-
-
 
 <!-- ================================
      END
@@ -1424,32 +1482,37 @@ body::before {
     id="ending"
 >
 
-    <div class="ending-inner">
+ 
+<div class="ending-inner">
 
-        <h2>
-            люблю тебя,Ариша
-        </h2>
+    <h2>
+        люблю тебя,Ариша
+    </h2>
 
-        <p>
-            
-        </p>
+    <p>
+    </p>
 
-    </div>
+</div>
+ 
 
 </section>
 
-
 </main>
-
-
 
 <script>
 
-    if ("scrollRestoration" in history) {
+/* ================================
+   SCROLL TO TOP
+================================ */
+
+if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
 }
 
-window.scrollTo(0, 0);
+window.addEventListener("beforeunload", function () {
+    window.scrollTo(0, 0);
+});
+
 
 /* ================================
    ELEMENTS
@@ -1631,12 +1694,6 @@ giftRevealButton.addEventListener(
         }, 600);
 
 
-        /*
-            После раскрытия подарка
-            через 7 секунд появляется
-            раздел с твоими словами.
-        */
-
         setTimeout(function () {
 
             reveal(letter);
@@ -1648,28 +1705,7 @@ giftRevealButton.addEventListener(
 
 
 /* ================================
-   LETTER → ENDING
-================================ */
-
-letter.addEventListener(
-    "click",
-    function (event) {
-
-        /*
-            Пока ничего не происходит
-            при клике по письму.
-
-            Финальный экран появляется
-            после того, как пользователь
-            дочитает страницу.
-        */
-
-    }
-);
-
-
-/* ================================
-   SHOW ENDING WHEN SCROLLED
+   SHOW ENDING
 ================================ */
 
 const observer =
@@ -1703,12 +1739,23 @@ const observer =
 
 observer.observe(letter);
 
-window.addEventListener("load", function () {
-    window.scrollTo(0, 0);
-});
+
+/* ================================
+   PAGE LOAD → TOP
+================================ */
+
+window.addEventListener(
+    "load",
+    function () {
+
+        setTimeout(function () {
+            window.scrollTo(0, 0);
+        }, 50);
+
+    }
+);
 
 </script>
 
 </body>
 </html>
-
