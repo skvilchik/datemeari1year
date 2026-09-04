@@ -79,7 +79,7 @@ section::before {
             transparent 72%
         );
 
-    filter: blur(18px);
+    filter: blur(9px);
 
     pointer-events: none;
 
@@ -98,7 +98,7 @@ section::after {
         radial-gradient(
             ellipse at center,
             transparent 35%,
-            rgba(0, 0, 0, 0.38) 100%
+            rgba(0, 0, 0, 0.12) 100%
         );
 
     pointer-events: none;
@@ -281,7 +281,7 @@ body::before {
 
     text-align: center;
 
-    background: #050304;
+    background: #090507;
 }
 
 .hero-inner {
@@ -357,7 +357,7 @@ body::before {
 
     margin-top: 43px;
 
-    color: #9b8981;
+    color: #c7b5ae;
 
     font-size: 13px;
 
@@ -460,7 +460,7 @@ body::before {
 
     margin-top: 42px;
 
-    color: #9b8981;
+    color: #c7b5ae;
 
     font-size: 14px;
 
@@ -691,7 +691,7 @@ body::before {
 
     margin-top: 34px;
 
-    color: #9b8981;
+    color: #c7b5ae;
 
     font-size: 14px;
 
@@ -800,7 +800,7 @@ body::before {
 
     margin-top: 40px;
 
-    color: #9b8981;
+    color: #c7b5ae;
 
     font-size: 14px;
 }
@@ -863,7 +863,7 @@ body::before {
 
 .gift-final {
 
-    color: #b6a49c;
+    color: #cdbdb7;
 
     font-family:
         "Bodoni Moda",
@@ -954,7 +954,7 @@ body::before {
 
 .letter-text {
 
-    color: #b6a49c;
+    color: #cdbdb7;
 
     font-family:
         "DM Sans",
@@ -1080,6 +1080,34 @@ body::before {
 ================================ */
 
 @media (max-width: 600px) {
+    section::before {
+        width: 125vw;
+        height: 125vw;
+        background: radial-gradient(
+            circle,
+            rgba(150, 0, 40, .48) 0%,
+            rgba(128, 0, 32, .28) 30%,
+            rgba(128, 0, 32, .12) 55%,
+            transparent 76%
+        );
+        filter: blur(6px);
+    }
+
+    section::after {
+        background: radial-gradient(
+            ellipse at center,
+            transparent 50%,
+            rgba(0, 0, 0, .04) 100%
+        );
+    }
+
+    .hero {
+        background:
+            radial-gradient(circle at center, rgba(128, 0, 32, .25), transparent 70%),
+            #090507;
+    }
+
+
 
     section::before {
         width: 145vw;
@@ -1185,6 +1213,13 @@ body {
     text-shadow: 0 0 12px rgba(128, 0, 32, .45);
 }
 
+.arrow-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: inherit;
+    -webkit-text-size-adjust: none;
+}
 </style>
 
 </head>
